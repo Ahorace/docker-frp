@@ -5,7 +5,7 @@ RUN wget https://github.com/fatedier/frp/releases/download/v0.39.0/frp_0.39.0_li
 RUN tar -zxf frp_0.39.0_linux_arm64.tar.gz
 RUN mv frp_0.39.0_linux_arm64.tar.gz /var/frp
 RUN rm -rf /var/frp/frps.ini
-RUN wget http://www.xinsite.top/frps.ini
+RUN wget http://www.xinsite.top/frps.txt
 RUN mv frps.ini /var/frp/frps.ini
 RUN apt remove -y wget
 RUN apt autoremove -y
