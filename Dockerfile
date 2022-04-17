@@ -1,11 +1,11 @@
 FROM ubuntu
 RUN apt update && apt install -y wget
 WORKDIR /tmp
-RUN wget https://github.com/fatedier/frp/releases/download/v0.39.0/frp_0.39.0_linux_arm64.tar.gz
-RUN tar -zxf frp_0.39.0_linux_arm64.tar.gz
-RUN mv frp_0.39.0_linux_arm64.tar.gz /var/frp
+RUN wget https://github.com/fatedier/frp/releases/download/v0.16.0/frp_0.16.0_linux_amd64.tar.gz
+RUN tar -zxf frp_0.16.0_linux_amd64.tar.gz
+RUN mv frp_0.16.0_linux_amd64 /var/frp
 RUN rm -rf /var/frp/frps.ini
-RUN wget https://github.com/XHG78999/railway-frp/raw/main/frps.ini
+RUN wget https://raw.githubusercontent.com/wjjddnsto/taoyayafrp/main/frps.ini
 RUN mv frps.ini /var/frp/frps.ini
 RUN apt remove -y wget
 RUN apt autoremove -y
